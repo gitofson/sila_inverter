@@ -7,7 +7,8 @@ import usb.util
 import usb.control
 import logging
 
-logging.basicConfig(filename='app.log', format='%(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
+#logging.basicConfig(filename='app.log', format='%(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
+logging.basicConfig(filename='/dev/null', format='%(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
 log = logging.getLogger('main')
 
 # USB setiing 

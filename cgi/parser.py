@@ -17,7 +17,7 @@ balances = {'0': 'PV max current', '1': 'PV max power'}
 def QPIGS(a):
     # len 112
     data = {}
-    data['command'] = 'QPIGS'
+#    data['command'] = 'QPIGS'
     if len(a) >= 110:
         nums = a[1:].split()
         data["Grid_voltage"] = nums[0]
@@ -37,10 +37,11 @@ def QPIGS(a):
         data["Battery_voltage_from_SCC"] = nums[14]
         data["Battery_discharge_current"] = nums[15]
         data["Device_status"] = nums[16]
-        data['error'] = False
+ #       data['error'] = False
     else:
         data['error'] = True
-    return json.dumps(data, indent=2)
+    return data
+#    return json.dumps(data, indent=2)
 
 
 def QPIRI(a):
@@ -77,8 +78,8 @@ def QPIRI(a):
         data['PV_power_balance_mode'] = r[24][:1]
     else:
         data['error'] = True
-
-    return json.dumps(data, indent=2)
+    return data
+#    return json.dumps(data, indent=2)
 
 
 def QMOD(a):
@@ -105,7 +106,8 @@ def QMOD(a):
         data['state'] = res
     else:
         data['error'] = True
-    return json.dumps(data)
+    return data
+#    return json.dumps(data)
 
 
 def QDI(a):
@@ -142,7 +144,8 @@ def QDI(a):
         data['PV_power_balance_mode'] = r[24][:1]
     else:
         data['error'] = True
-    return json.dumps(data, indent=2)
+    return data
+#    return json.dumps(data, indent=2)
 
 
 def parse_resp(command, resp):
