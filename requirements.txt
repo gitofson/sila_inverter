@@ -1,1 +1,5 @@
-sudo apt install python3-usb
+sudo apt install python3-usb python3-pip 
+pip install crc16 pyusb python3-influxdb
+python 10 issue fix:
+pip3 install pycrc16 -U
+

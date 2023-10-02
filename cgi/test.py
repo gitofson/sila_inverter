@@ -6,5 +6,7 @@ if __name__ == '__main__':
     vmiii = Invertor()
     cmds = ['QPIGS', 'QDI', 'QMOD', 'QPIRI']
     for command in cmds:
-        data = parse_resp(command, vmiii.write(command))
+        out=vmiii.write(command)
+        print(out)
+        data = parse_resp(command, out)
         print(data)
