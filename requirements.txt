@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 sudo apt install python3-usb python3-pip 
 pip install crc16 pyusb python3-influxdb
 python 10 issue fix:
 pip3 install pycrc16 -U
 
+=======
+sudo apt install python3-usb
+sudo pip3 install pycrc16 --break-system-packages
+ ## issue fix, delete thos probably: PY_SSIZE_T_CLEAN macro must be defined for '#' formats
+ #pip uninstall pycrypto
+ #pip install pycryptodome
+>>>>>>> be72bce (req updated)

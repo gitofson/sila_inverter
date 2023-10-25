@@ -8,4 +8,4 @@ if __name__ == '__main__':
     command = 'QPIGS'
     data = parse_resp(command, vmiii.write(command))
     print(data)
-    db.dbsave('vmiii_qpigs', data)
+    db.dbsave('vmiii_nadejkov_qpigs', data)
